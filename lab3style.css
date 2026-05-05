@@ -1,0 +1,224 @@
+
+h2{
+    background-color: #ffc5e9f1;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+.nav{
+    background-color: #c57ba9f1;/* фон блока  меню*/
+    box-shadow: 5px 5px gray;/* тень блока */
+    font-size: 20px;/* размер шрифта */
+    padding:5px 5px 5px 100px;
+    height: 50px;
+}
+
+.nav .links{
+    background: linear-gradient(to bottom, #e9bfee, rgb(247, 235, 246));
+    text-decoration: none; /* убираем подчеркивание */
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    float: left; /* делаем блоки плавающими */
+    border-style: solid;
+    border-width: 0 0.5px 0 0;
+    border-radius: 4px;
+    padding: 13px 35px;
+    margin: 0 1px;
+    color: black;
+    text-transform: uppercase; /* текст в кнопках верхним регистром */
+    font-weight: 700;
+}
+
+.nav .links:hover{
+    background: linear-gradient(to bottom, #d4a8c3f1, #b66e98f1);
+}
+
+.nav div{
+    text-align: center;
+    float: left;
+    position: relative;
+}
+
+.nav div:hover .drop {
+    display: block;
+}
+
+.nav div .drop{ /* блок для вложенных пунктов меню */
+    position: absolute; /* вынимаем из нормального потока, чтобы отображать поверх другого контента при необходимости */
+    display: none;
+    top: 100%; /* смещаем относительно верхней стороны на 100%, т.е. на всю высоту */
+    left: 0%;
+    z-index: 10;
+}
+
+.drop_item{ /* оформление вложенных пунктов меню в блоке .nav div .drop */
+    text-decoration: none;
+    display: block;
+    background: linear-gradient(to bottom, #f0c5ed, rgb(243, 218, 241));
+    color: black;
+    border-style: solid;
+    border-width: 0 0.5px 0 0;
+    border-radius: 4px;
+    padding: 13px 35px;
+}
+
+.drop_item:hover{ /* оформление вложенных пунктов меню в блоке .nav div .drop */
+    background: linear-gradient(to bottom, #d4a8c3f1, #b66e98f1);
+}
+
+
+
+.a{
+    font-size: 20px;
+    width: 180px;
+    float: left;
+    background-color: #c7bcd1;
+    padding:5px;
+    margin-right: 20px;
+    border: 4px solid #744b9a;
+    box-sizing: border-box;
+}
+
+.a .links{
+    background: linear-gradient(to bottom, #e9bfee, rgb(247, 235, 246));
+    text-decoration: none; /* убираем подчеркивание */
+    font-size: 15px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    float: left; /* делаем блоки плавающими */
+    border-style: solid;
+    border-width: 0 0.5px 0 0;
+    border-radius: 4px;
+    padding: 13px 35px;
+    margin: 0 1px;
+    color: black;
+    text-transform: uppercase; /* текст в кнопках верхним регистром */
+    font-weight: 700;
+    width: 90px;
+}
+
+.a .links:hover{
+    background: linear-gradient(to bottom, #d4a8c3f1, #b66e98f1);
+}
+
+.a div{
+    text-align: center;
+    float: left;
+    position: relative;
+}
+
+.a div:hover .drop {
+    display: block;
+}
+
+.a div .drop{ /* блок для вложенных пунктов меню */
+    position: absolute; /* вынимаем из нормального потока, чтобы отображать поверх другого контента при необходимости */
+    display: none;
+    top: 100%; /* смещаем относительно верхней стороны на 100%, т.е. на всю высоту */
+    left: 0%;
+    z-index: 10;
+}
+
+.a div .drop {
+    position: relative;
+}
+
+.a div .drop .drop2 .drop_level2 {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 100%; /* появляется справа */
+    z-index: 10;
+    background: linear-gradient(to bottom, #f0c5ed, rgb(243, 218, 241));
+    border-radius: 4px;
+    min-width: 180px; /* чтобы не было слишком узко */
+}
+
+/* 3. Показываем меню второго уровня ТОЛЬКО при наведении на родительский .drop2 */
+.a div .drop .drop2:hover .drop_level2 {
+    display: block;
+}
+
+/* 4. Оформление ссылок внутри .drop_level2 (чтобы было красиво) */
+.drop_level2 .drop_item {
+    white-space: nowrap; /* чтобы текст не переносился */
+}
+
+
+
+
+
+
+.z{
+    float: right;
+    background-color: #c7bcd1;
+    padding:5px;
+    width: 180px;
+    margin-left: 20px;
+    border: 4px solid #744b9a;
+    box-sizing: border-box;
+}
+
+.center{
+    float: left;
+    background-color: #bfadd0;
+    padding:5px;
+    width: calc(100% - 410px);
+    border: 4px solid #744b9a;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center
+}
+
+
+
+.base{
+    display: inline-block;
+    position: relative;
+    width: 230px;
+    height: 150px;
+    margin: 3px;
+    border-style: solid;
+    border-color:#ffc5e9f1;
+
+    font-size: 36px;
+    font-family: arial;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.picture{
+    display: inline-block;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.layer{ /* наплывающий блок */
+    position: absolute;  /* устанавливаем абсолютное позиционирование */
+    top: 0px;    
+    left: -100%;     /* смещаем на всю ширину от левой стороны */
+    text-align: center;
+    width: inherit; /* наследуем ширину и высоту */
+    height: inherit;     
+    text-decoration: none;
+    background-color: rgba(143, 64, 122, 0.45); /* устанавливаем цвет и прозрачность */ 
+    transition: left .3s; /* добавляем плавность для позиционирования 0,3 секунды */
+    color: #000;
+}
+
+.base:hover .layer{ /* при наведении блок смещается на 0 px от левой стороны */
+    left: 0px;
+}
+
+.osn{
+    padding:5px;
+    vertical-align: top;
+    margin: 20px;
+    box-sizing: border-box;
+    
+}
+
